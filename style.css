@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    font-family: 'B612', sans-serif;
+    font-family: 'Quicksand', sans-serif;;
     margin:0;
     padding:0;
     box-sizing: border-box;
@@ -11,10 +11,7 @@ body {
     font-size:2rem;
 }
 
-section:not(:first-child) {
-    padding-top:5vh;
-    padding-bottom:5vh;
-}
+
 .picture{
     width: 100%;
     min-width: 30vh;
@@ -50,17 +47,19 @@ h3{
     margin:0 0;
     padding: 0 0;
     font-size:3rem;
+    text-shadow: 1px 1px 2px var(--gray-color);
 }
 
 h4 {
     font-size:2.8rem;
+    text-shadow: 1px 1px 2px var(--gray-color);
 }
 
 h5 {
     font-size:2.5rem;
+    text-shadow: 1px 1px 2px var(--gray-color);
 }
 .bordered{
-    border: 2px solid var(--gray-color);
     padding:5vh;
     border-radius: 0.2vh;
 }
@@ -70,9 +69,8 @@ h5 {
     font-family: 'Permanent Marker', cursive;
 }
 
-.hl-blue-txt{
+.blue-txt{
     color:var(--dark-blue-color);
-    font-family: 'Permanent Marker', cursive;
 }
 
 .flex-item{
@@ -85,7 +83,7 @@ h5 {
 
 .section-heading {
     font-family: 'Dancing Script', cursive;
-    color:rgb(0, 132, 255);
+    color:var(--dark-blue-color);
 }
 
 .icon-hover:hover{
@@ -122,6 +120,10 @@ h5 {
     padding:2vh 0;
 }
 
+.padding-5-top-bot{
+    padding-top:5vh;
+    padding-bottom:5vh;
+}
 .padding-5-top{
     padding-top:5vh;
 }
@@ -257,7 +259,9 @@ h5 {
 
 
 
-
+.special-font {
+    font-family:'Dancing Script', cursive;
+}
 
 #front-page .flex-container:first-child{
     background:  url(images/home-bg-img.jpg);
@@ -273,22 +277,27 @@ h5 {
 }
 
 #small-icon-container{
-    justify-content:space-around ;
+    justify-content:space-evenly ;
     padding:0 0;
     width:50%;
     border-radius: 50vh;
     padding:2vh;
 }
 
+#small-icon-container> .flex-item{
+    padding:1%;
+}
+
 #personal-info-item{
-    padding-right:5vh;
+    padding-right:7.5vh;
 }
 #personal-info-container{
-    background-color: black;
-    border-radius: 4rem;
+    background-color: var(--darkish-white-color);
+    border-radius: 2.5rem;
     overflow: hidden;
-    padding:5% 0;
+    padding:7.5% 0;
     margin:auto;
+    color:var(--dark-gray-color);
     width: 100%;
 }
 
@@ -317,7 +326,7 @@ footer .flex-container {
     --normal-white-color: rgb(238,240,251);
     --darkish-white-color:rgb(224, 224, 224);
     --highlight-color:rgb(255, 72, 0);
-    --dark-blue-color:rgb(0, 132, 255);
+    --dark-blue-color:rgb(0, 132, 255);;
     --green-color:rgb(0, 255, 149);
     --img-icon-size:64px;
     --img-icon-small-size:48px;
