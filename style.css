@@ -184,9 +184,6 @@ h5 {
     width:100%;
 }
 
-.full-height{
-    height:20vh;
-}
 .three-quarter-width{
     width:75%;
 }
@@ -291,7 +288,26 @@ h5 {
 #personal-info-item{
     padding-right:7.5vh;
 }
+
+@keyframes fade-in {
+    0% {
+        pointer-events: visible;
+      visibility: visible;
+      opacity: 0;
+        
+    }
+
+    100% {
+        pointer-events: visible;
+    visibility: visible;
+    opacity: 1;
+    }
+  }
+
 #personal-info-container{
+    pointer-events: none;
+    opacity: 0;
+    animation: 2s fade-in 5.5s forwards;
     background-color: var(--darkish-white-color);
     border-radius: 2.5rem;
     overflow: hidden;
