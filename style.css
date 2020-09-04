@@ -60,6 +60,8 @@ h5 {
     text-shadow: 1px 1px 2px var(--gray-color);
 }
 
+
+
 .bordered{
     padding:5vh;
     border-radius: 0.2vh;
@@ -83,7 +85,6 @@ h5 {
 }
 
 .section-heading {
-    padding:2%;
     font-family: 'Dancing Script', cursive;
     color:var(--dark-blue-color);
 }
@@ -184,12 +185,17 @@ h5 {
     }
 }
 
+#education,#about .small-icon{
+    margin:auto;
+    display: block;
+}
+
 @media only screen and (min-width: 768px) {
     .flex-container{
         flex-wrap:nowrap;
     }
     #education-work *{
-        text-align:left;
+        text-align:center;
     }
 
 }
@@ -250,16 +256,16 @@ h5 {
     }
 }  
 #slide-left-1 {
-    animation: 2.5s slide-horizontal-center 1.75s forwards;
+    animation: 2s slide-horizontal-center 1.75s forwards;
     transform: translateX(150%);
 }
 #slide-right-1 { 
-        animation: 2.5s slide-horizontal-center 0s forwards;
+        animation: 2s slide-horizontal-center 0s forwards;
         transform:translateX(-100%);
 }
 
 #slide-up-1{
-    animation:2.5s slide-vertical-center 3.5s forwards;
+    animation:2s slide-vertical-center 3.5s forwards;
     transform:translateY(100vh);
 }
 
@@ -309,22 +315,21 @@ h5 {
 @keyframes fade-in {
     0% {
         pointer-events: visible;
-      visibility: visible;
-      opacity: 0;
-        
-    }
+        visibility: visible;
+        opacity: 0; 
+        }
 
     100% {
         pointer-events: visible;
-    visibility: visible;
-    opacity: 1;
+        visibility: visible;
+        opacity: 1;
     }
-  }
+}
 
 #personal-info-container{
     pointer-events: none;
     opacity: 0;
-    animation: 2s fade-in 5.5s forwards;
+    animation: 2s fade-in 5s forwards;
     background-color: var(--darkish-white-color);
     border-radius: 2.5rem;
     overflow: hidden;
