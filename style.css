@@ -173,6 +173,27 @@ h5 {
     overflow:visible;
 }
 
+@media only screen and (max-width: 767px) {
+    .flex-container{
+        flex-wrap:wrap;
+    }
+
+    
+    #education-work *{
+    text-align:center;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .flex-container{
+        flex-wrap:nowrap;
+    }
+    #education-work *{
+        text-align:left;
+    }
+
+}
+
 
 .flex-vertical
 {
@@ -250,6 +271,7 @@ h5 {
     align-self: flex-start;
     padding:5%;
 }
+
 
 .special-font {
     font-family:'Dancing Script', cursive;
