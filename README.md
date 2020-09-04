@@ -1,2 +1,2 @@
-Just a simple portfolio using css, html and JS.
-Made in order to improve js, css, html knowledge.
+Just a simple portfolio about myself, using CSS, HTML and JavaScript (no bootstrap).
+Made in order to improve front-end development knowledge.
