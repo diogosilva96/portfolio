@@ -1,12 +1,12 @@
 html {
-    font-size:62.5%;
+    font-size: calc(100% * calc(10 / 16)); /*converting 1 rem (16px) to 1rem - 10px, to be easier to use rems (e.g. 32px will be 3.2rem)*/ 
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Quicksand', sans-serif;;
     margin:0;
-    padding:0;
-    box-sizing: border-box;
+    padding:0; 
     color:var(--darker-gray-color);
     font-size:2rem;
 }
@@ -71,10 +71,11 @@ h3 {
 }
 .flex-item{
     margin:0 0;
-    padding: 0;
     width: 100%;
     text-align: center;
     overflow:visible;
+    align-self:flex-start;
+    padding:1%;
 }
 
 .section-heading {
@@ -158,12 +159,16 @@ footer .link{
 }
 .icon {
     height:var(--img-icon-size);
-    vertical-align: middle;
+    margin:auto;
+    display: block;
 }
 
 .small-icon{
-        height:var(--img-icon-small-size);
-        vertical-align: middle;
+    height:var(--img-icon-small-size);
+}
+
+.very-small-icon {
+    height: var(--img-icon-very-small-size);
 }
 
 .white-bg {
@@ -198,7 +203,7 @@ footer .link{
 
     
     #education-work *{
-    text-align:center;
+        text-align:center;
     }
 }
 
@@ -259,6 +264,10 @@ footer .link{
     text-align:center;
 }
 
+.text-justify {
+    text-align:justify;
+}
+
 .footer-heading {
     font-weight: bold;
     padding-bottom:1%;
@@ -307,12 +316,6 @@ footer .link{
     overflow: hidden;
 }
 
-#education-work > .container > .flex-container > .flex-item {
-    align-self: flex-start;
-    padding:5%;
-}
-
-
 .special-font {
     font-family:'Dancing Script', cursive;
 }
@@ -338,11 +341,7 @@ footer .link{
     padding:2vh;
 }
 
-#small-icon-container> .flex-item{
-    padding:1%;
-}
-
-#personal-info-item{
+#front-page__personal-info-item{
     padding-right:7.5vh;
 }
 
@@ -373,22 +372,8 @@ footer .link{
     width: 100%;
 }
 
-
-#personal-info-container > p > .small-icon{
-    height: 3rem;
-}
-
-#about .flex-item{
-    text-align: justify;
-}
-
 #front-page {
     color:var(--normal-white-color);
-}
-
-footer .flex-item{
-    align-self: flex-start;
-    text-align: center;
 }
 
 :root{
@@ -402,4 +387,5 @@ footer .flex-item{
     --green-color:rgb(0, 255, 149);
     --img-icon-size:6rem;
     --img-icon-small-size:4.8rem;
+    --img-icon-very-small-size:3rem;
 }

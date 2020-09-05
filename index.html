@@ -10,9 +10,10 @@
     <script defer src="app.js"></script>
   </head>
     <body class="white-bg">
+      <div class="container" id="full-page-container">
       <section id="front-page">
-        <div class="container full-width bg-img-container">
-        <div class="flex-container full-width" id="front-page-container">
+        <div class="container full-width bg-img-container" id="front-page-container">
+        <div class="flex-item flex-container full-width" >
           <div class="flex-container full-width flex-vertical">
             <div class="flex-item full-width">
               <h1 class="heading front-page-heading"id="slide-right-1">Hello World!</h1>
@@ -20,53 +21,53 @@
               <h1 class="heading front-page-heading" id="slide-up-1"> a <span class="hl-txt">Software Engineer</span>. </h1> 
             </div>
           </div>
-          <div class="flex-item quarter-width" id="personal-info-item"> 
-            <div class="flex-container" >
+            <div class="flex-item flex-container quarter-width" id="front-page__personal-info-item">
               <div class="flex-item" id="personal-info-container"> 
                 <img src="images/face.jpg" class="rounded-picture padding-2">
                   <h3 class="heading special-font blue-txt">Diogo Silva</h3>
                   <p>Software Engineer
-                  <br>Madeira, Portugal <img src="https://www.countryflags.io/pt/flat/48.png" class="small-icon"></p>
+                  <br>Madeira, Portugal <img src="https://www.countryflags.io/pt/flat/48.png" class="very-small-icon"></p>
                 <div class="flex-container" id="small-icon-container">
                   <div class="flex-item">
-                    <a href="" class="link"><img src="images/facebook-icon.png" class="small-icon icon-hover"></a>
+                    <a href="" class="link"><img src="images/facebook-icon.png" class="icon small-icon icon-hover"></a>
                   </div>
                   <div class="flex-item">
-                    <a href="https://www.linkedin.com/in/diogo-silva-0716751b3/" class="link"><img src="images/linkedin-icon.png" class="small-icon icon-hover"></a>
+                    <a href="https://www.linkedin.com/in/diogo-silva-0716751b3/" class="link"><img src="images/linkedin-icon.png" class="icon small-icon icon-hover"></a>
                   </div>
                   <div class="flex-item">
-                    <a href="https://github.com/diogosilva96" class="link"><img src="images/github-icon2.png" class="small-icon icon-hover"></a>
+                    <a href="https://github.com/diogosilva96" class="link"><img src="images/github-icon2.png" class="icon small-icon icon-hover"></a>
                   </div>
-                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-        <div class="line-gradient-container">
-        </div>
       </section>
+      <div class="line-gradient-container">
+      </div>
       <section id="about">
         <div class="container full-width dark-white-bg padding-5-top-bot">
-          <img src="images/about.png" class="small-icon"> 
+          <img src="images/about.png" class="icon small-icon"> 
           <h2 class="heading section-heading padding-2-top-bot">About me</h2>
           <div class="flex-container half-width white-bg bordered padding-5">
             <div class="flex-item full-width padding-2">
-              <p>
+              <p class="text-justify">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, qui, nobis optio velit dolor iure quis, accusamus earum recusandae numquam voluptates enim vel sequi ducimus expedita perferendis voluptatem id officiis! Aspernatur esse soluta veritatis tempora optio, rem ipsam sequi dicta eaque illo pariatur vero deleniti officia culpa nulla iste ut?
               </p>
             </div>
-            <div class="flex-item half-width padding-2">
-              <img src="images/face.jpg" alt="diogo-photo" class="picture">
+            <div class="flex-item full-width padding-2">
+              <p class="text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit nulla officia voluptate accusantium quae ex necessitatibus vel nobis excepturi amet.</p>
             </div>
           </div>
         </div>
       </section>
+      <div class="line-gradient-container">
+      </div>
       <section id="education-work">
         <div class="container full-width white-bg padding-5-top-bot">
-        <div class="flex-container half-width padding-2-top-bot">
+        <div class="flex-container half-width dark-white-bg bordered padding-5">
             <div class="flex-item full-width" id="education">
-              <img src="images/education.png" class="small-icon"> 
+              <img src="images/education.png" class="icon small-icon"> 
                 <h2 class="heading section-heading padding-2-top-bot">Education</h2>
                 <div class="flex-container flex-vertical full-width">
                   <div class="flex-item full-width">
@@ -80,7 +81,7 @@
                 </div>
             </div>
             <div class="flex-item full-width" id="work-experience">
-              <img src="images/work.png" class="small-icon">   
+              <img src="images/work.png" class="icon small-icon">   
               <h2 class="heading section-heading padding-2-top-bot ">Work Experience</h2>
                 <div class="flex-item">
                   <p>None.</p>
@@ -110,5 +111,6 @@
           </div>
         </div>
       </footer>
+    </div>
   </body>
 </html>
