@@ -26,23 +26,16 @@ body {
     margin:auto;
 }
 
-h1{
+
+.front-page-heading{
     font-size:5rem;
     text-shadow: 1px 1px 2px var(--gray-color);
     margin:0 0;
     font-weight: none;
     margin:auto;
     text-shadow: 3px 3px 4px black;
-
 }
 
-
-h2 {
-    font-size:4rem;
-    text-shadow: 1px 1px 2px var(--gray-color);
-    margin:0 0;
-    font-weight: none;
-}
 h3{
     margin:0 0;
     padding: 0 0;
@@ -50,21 +43,8 @@ h3{
     text-shadow: 1px 1px 2px var(--gray-color);
 }
 
-h4 {
-    font-size:2.8rem;
-    text-shadow: 1px 1px 2px var(--gray-color);
-}
-
-h5 {
-    font-size:2.5rem;
-    text-shadow: 1px 1px 2px var(--gray-color);
-}
-
-
-
 .bordered{
-    padding:5vh;
-    border-radius: 0.2vh;
+    border-radius: 1%;
 }
 
 .hl-txt{
@@ -91,15 +71,31 @@ h5 {
 }
 
 .section-heading {
+    font-size:4rem;
+    text-shadow: 1px 1px 2px var(--gray-color);
+    margin:0 0;
+    font-weight: none;
     font-family: 'Dancing Script', cursive;
     color:var(--dark-blue-color);
 }
 
+.section-heading::after {
+        content:'';
+        display:block;
+        width:5rem;
+        height:0.5rem;
+        border-bottom:0.3rem solid var(--dark-blue-color);
+        margin:auto;
+        box-shadow: 0px 0.2rem var(--darker-gray-color);
+    
+}
 .icon-hover:hover{
 
     transform:scale(1.1); 
     transition:all 0.3s ease-in-out;
 }
+
+
 
 .text-hover:hover{ 
     transform:scale(1.05); 
@@ -112,6 +108,7 @@ h5 {
     text-decoration:none;
     color:var(--darker-gray-color);
 }
+
 footer .link{
     color:var(--darkish-white-color);
 }
@@ -125,7 +122,9 @@ footer .link{
     text-align: center;
     margin:auto;
     width: 100%;
-    overflow:hidden;
+    overflow:visible;
+    display:grid;
+    grid-template-columns: 1fr;
 }
 
 .padding-2-top-bot {
@@ -257,12 +256,21 @@ footer .link{
 .footer-heading {
     font-weight: bold;
     padding-bottom:1%;
-    border-bottom: var(--gray-color) solid 0.4rem;
     border-radius:1rem;
     margin-right:10%;
     margin-left:10%;
 }
 
+.footer-heading::after{
+    content:'';
+    display:block;
+    width:40%;
+    padding-bottom: 1%;
+    height:0.5rem;
+    border-bottom:0.3rem solid var(--darkish-white-color);
+    box-shadow:0px 0.2rem var(--dark-blue-color);
+    margin:auto;
+}
 
 @keyframes slide-horizontal-center {
     to {
@@ -363,9 +371,8 @@ footer .link{
 #personal-info-container > p > .small-icon{
     height: 3rem;
 }
-#about .flex-item:first-child {
+#about .flex-item{
     text-align: justify;
-    padding-right:2vh;
 }
 
 #front-page {
@@ -376,9 +383,6 @@ footer .flex-item{
     align-self: flex-start;
     text-align: center;
 }
-
-
-
 
 :root{
     --darker-gray-color:rgb(56, 55, 55);
