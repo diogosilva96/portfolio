@@ -1,116 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Permanent+Marker&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Long+Cang&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3b15d808a4.js" crossorigin="anonymous"></script>
     <link href="style.css" rel="stylesheet" type="text/css">
     <script defer src="app.js"></script>
-  </head>
-    <body class="white-bg">
-      <div class="container" id="full-page-container">
-      <section id="front-page">
-        <div class="container full-width bg-img-container" id="front-page-container">
-        <div class="flex-item flex-container full-width" >
-          <div class="flex-container full-width flex-vertical">
-            <div class="flex-item full-width">
-              <h1 class="heading front-page-heading"id="slide-right-1">Hello World!</h1>
-              <h1 class="heading front-page-heading" id="slide-left-1"> I'm <span class="hl-txt">Diogo Silva</span>, </h1> 
-              <h1 class="heading front-page-heading" id="slide-up-1"> a <span class="hl-txt">Software Engineer</span>. </h1> 
+</head>
+    <body>
+    <section id="front-page">
+        <div class="flex-container">
+            <div class="flex-item" id="welcome-msg">
+                <h1 id="slide-right-1">Hello World!</h1>
+                <h1 id="slide-left-1">I'm <span class="hl-txt">Diogo Silva</span>,</h1>
+                <h1 id="slide-up-1">a <span class="hl-txt">Software Engineer</span>.</h1>
             </div>
-          </div>
-            <div class="flex-item flex-container quarter-width" id="front-page__personal-info-item">
-              <div class="flex-item" id="personal-info-container"> 
-                <img src="images/face.jpg" class="rounded-picture padding-2">
-                  <h3 class="heading special-font blue-txt">Diogo Silva</h3>
-                  <p>Software Engineer
-                  <br>Madeira, Portugal <img src="https://www.countryflags.io/pt/flat/48.png" class="very-small-icon"></p>
-                <div class="flex-container" id="small-icon-container">
-                  <div class="flex-item">
-                    <a href="" class="link"><img src="images/facebook-icon.png" class="icon small-icon icon-hover"></a>
-                  </div>
-                  <div class="flex-item">
-                    <a href="https://www.linkedin.com/in/diogo-silva-0716751b3/" class="link"><img src="images/linkedin-icon.png" class="icon small-icon icon-hover"></a>
-                  </div>
-                  <div class="flex-item">
-                    <a href="https://github.com/diogosilva96" class="link"><img src="images/github-icon2.png" class="icon small-icon icon-hover"></a>
-                  </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      </section>
-      <div class="line-gradient-container">
-      </div>
-      <section id="about">
-        <div class="container full-width dark-white-bg padding-5-top-bot">
-          <img src="images/about.png" class="icon small-icon"> 
-          <h2 class="heading section-heading padding-2-top-bot">About me</h2>
-          <div class="flex-container half-width white-bg bordered padding-5">
-            <div class="flex-item full-width padding-2">
-              <p class="text-justify">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, qui, nobis optio velit dolor iure quis, accusamus earum recusandae numquam voluptates enim vel sequi ducimus expedita perferendis voluptatem id officiis! Aspernatur esse soluta veritatis tempora optio, rem ipsam sequi dicta eaque illo pariatur vero deleniti officia culpa nulla iste ut?
-              </p>
-            </div>
-            <div class="flex-item full-width padding-2">
-              <p class="text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit nulla officia voluptate accusantium quae ex necessitatibus vel nobis excepturi amet.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <div class="line-gradient-container">
-      </div>
-      <section id="education-work">
-        <div class="container full-width white-bg padding-5-top-bot">
-        <div class="flex-container half-width dark-white-bg bordered padding-5">
-            <div class="flex-item full-width" id="education">
-              <img src="images/education.png" class="icon small-icon"> 
-                <h2 class="heading section-heading padding-2-top-bot">Education</h2>
-                <div class="flex-container flex-vertical full-width">
-                  <div class="flex-item full-width">
-                    <p class="bold-txt">2017-2020</p>
-                    <p> University of Madeira. <br>Master's Degree on Software Engineering. <br>Grade: 16</p>
-                  </div>
-                  <div class="flex-item full-width">
-                      <p class="bold-txt">2014-2017</p>
-                      <p> University of Madeira. <br>Bachelor's Degree on Software Engineering. <br>Grade: 14</p>
-                  </div>
+            <div class="flex-item" id="personal-info">
+                <img src="images/face.jpg" id="picture">
+                <h2 class="special-font">Diogo Silva</h2>
+                <p>Software Engineer
+                <br>Madeira, Portugal <img src="https://www.countryflags.io/pt/flat/48.png" ></p>
+                <div class="flex-container">
+                    <a href="" class="link"><i class="fab fa-facebook-f fa-2x"></i></a>
+                    <a href="https://www.linkedin.com/in/diogo-silva-0716751b3/" class="link"><i class="fab fa-linkedin-in fa-2x"></i></a>
+                    <a href="https://github.com/diogosilva96" class="link"><i class="fab fa-github fa-2x"></i></a>
                 </div>
             </div>
-            <div class="flex-item full-width" id="work-experience">
-              <img src="images/work.png" class="icon small-icon">   
-              <h2 class="heading section-heading padding-2-top-bot ">Work Experience</h2>
-                <div class="flex-item">
-                  <p>None.</p>
-                </div>       
-          </div>
-      </div>
-    </div>
-      <footer>
-        <div class="line-gradient-container"></div>
-        <div class="container gray-bg gray-txt padding-2-top-bot">
-          <div class="flex-container three-quarter-width">
-            <div class="flex-item padding-5-top">
-              <p class="footer-heading">Contact me</p>
-                <p class="white-txt" id="mail">diogo_silva_96@hotmail.com</p>
-            </div>
-            <div class="flex-item padding-5-top">
-                  <p class="footer-heading">Elsewhere</p>
-                  <p>
-                  <a href="" class="link text-hover">Facebook<br></a>
-                  <a href="https://www.linkedin.com/in/diogo-silva-0716751b3/" class="link text-hover">LinkedIn<br></a>
-                  <a href="https://github.com/diogosilva96" class="link text-hover">GitHub</a></p>
-            </div>
-          </div>
-          <div class="container padding-2-top-bot">
-            <p class="small-txt" id="copyright"> COPYRIGHT DIOGO SILVA 2020. <br>
-              ALL RIGHTS RESERVED. </p>  
-          </div>
         </div>
-      </footer>
-    </div>
-  </body>
+    </section>
+    <section id="about">
+        <div class="flex-container">
+            <h1 class="section-heading">About</h1>
+            <div class="flex-container">
+                <div class="flex-item">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis adipisci nostrum totam eaque aut, delectus eius earum dolore pariatur voluptatum consequatur corrupti minima, maxime repellendus maiores rerum voluptates. Atque autem sed ad alias pariatur quod ipsam quaerat ducimus odio aspernatur repellat ipsum veniam, id obcaecati minima facere expedita libero dolores neque? Nisi, consequuntur. Est tenetur tempore eius nesciunt, doloribus laborum voluptatem laboriosam voluptatibus fugit. Voluptates, officiis rerum aspernatur ad earum nam? Obcaecati aliquid, animi voluptatum architecto dolor similique? Labore quidem ea maiores, mollitia exercitationem porro, magnam dolores ad incidunt debitis repellat nobis similique fugiat voluptatibus alias ab eum cumque aliquam!
+                </div>
+                <div class="flex-item">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta dolore magni maiores officiis beatae amet cupiditate adipisci. Quaerat obcaecati nostrum laborum aut beatae est perferendis similique eum vitae ut sint accusantium neque doloremque quam incidunt aspernatur eligendi voluptate, repellat facilis? Alias suscipit molestiae deleniti nam rerum praesentium ipsam vitae error voluptates laborum nihil quae sequi, iste obcaecati vero a nemo voluptatum. Commodi quae id eius nihil iure veniam mollitia ut perspiciatis dolorum accusantium suscipit sunt minima deserunt labore quam amet, velit tempore porro excepturi voluptas ab! Corrupti libero, delectus sunt dolor reiciendis laboriosam nihil illo et, optio, quos ex placeat.
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
 </html>
