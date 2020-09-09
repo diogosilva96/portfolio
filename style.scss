@@ -186,7 +186,7 @@ a i{
         input,textarea {
             display:block;
             text-align:left;
-            margin:2% auto;
+            margin:0 auto;
             border: solid 0.2rem var(--gray-color);
             &:hover{
                 border:solid 0.2rem var(--darker-gray-color);
@@ -229,7 +229,7 @@ a i{
             height:100%;
             .flex-container{
                 flex-direction: row;
-
+                padding:0;
                 .flex-item {
                     margin: 0 auto;
                     height:100%;
@@ -251,10 +251,7 @@ a i{
                             }
                         }
                     }
-                    #email {
-                        margin:auto;
-                        font-size:1.8rem;
-                    }
+
 
 
                 }

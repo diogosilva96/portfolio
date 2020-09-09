@@ -230,7 +230,7 @@ a i:hover {
 #contact form input, #contact form textarea {
   display: block;
   text-align: left;
-  margin: 2% auto;
+  margin: 0 auto;
   border: solid 0.2rem var(--gray-color);
 }
 
@@ -292,6 +292,7 @@ a i:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  padding: 0;
 }
 
 #footer .flex-container .flex-item .flex-container .flex-item {
@@ -326,11 +327,6 @@ a i:hover {
 
 #footer .flex-container .flex-item .flex-container .flex-item #links a i:hover {
   color: var(--dark-blue-color) !important;
-}
-
-#footer .flex-container .flex-item .flex-container .flex-item #email {
-  margin: auto;
-  font-size: 1.8rem;
 }
 
 #footer .flex-container i {
