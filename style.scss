@@ -168,6 +168,52 @@ a i{
     }
 }
 
+#contact {
+    background-color:var(--normal-white-color);
+    padding:8%;
+    background-color:var(--darkish-white-color);
+    form {
+        width:75%;
+        margin:auto;
+        padding:5% 0;
+        border-radius: 0.4rem;
+        background-color:var(--normal-white-color);
+        animation:0.5s;
+        h1{
+            text-align:center;
+            padding-bottom:2%;
+        }
+        input,textarea {
+            display:block;
+            text-align:left;
+            margin:2% auto;
+            border: solid 0.2rem var(--gray-color);
+            &:hover{
+                border:solid 0.2rem var(--darker-gray-color);
+            }
+        }
+        input[type="text"],input[type="email"],textarea {
+            width:250px;
+            height:2rem;
+            outline:none;
+            background-color:var(--normal-white-color); 
+            color:var(--dark-blue-color);
+            border-radius:0.5rem;
+            animation: all 0.5s;
+            &:focus{
+                border:solid 0.2rem var(--dark-blue-color);
+            } 
+            &:hover{
+                border:solid 0.2rem var(--dark-blue-color);
+            }
+            &#f-content{
+                height:200px;
+            }   
+        }
+        
+    }
+    
+}
 #footer {
     margin:0;
     padding:0;
