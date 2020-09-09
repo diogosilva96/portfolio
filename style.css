@@ -116,15 +116,6 @@ body {
           justify-content: space-evenly;
 }
 
-#front-page .flex-container .flex-item:last-child .flex-container i {
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
-#front-page .flex-container .flex-item:last-child .flex-container i:hover {
-  color: var(--dark-blue-color);
-}
-
 #front-page .flex-container .flex-item:last-child h2 {
   color: var(--dark-blue-color);
 }
@@ -134,8 +125,17 @@ body {
   text-shadow: 2px 2px 3px black;
 }
 
-i {
+a i {
   color: var(--darker-gray-color);
+  -webkit-transition: 1s;
+  transition: 1s;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+a i:hover {
+  color: var(--dark-blue-color);
 }
 
 #about {
@@ -206,12 +206,99 @@ i {
   font-weight: bold;
 }
 
+#footer {
+  margin: 0;
+  padding: 0;
+}
+
+#footer .flex-container {
+  background-color: var(--darker-gray-color);
+  padding: 2% 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#footer .flex-container .flex-item {
+  width: 100%;
+  margin: 0;
+  height: 100%;
+}
+
+#footer .flex-container .flex-item .flex-container {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#footer .flex-container .flex-item .flex-container .flex-item {
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+}
+
+#footer .flex-container .flex-item .flex-container .flex-item #links {
+  margin: 0 auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#footer .flex-container .flex-item .flex-container .flex-item #links a {
+  padding: 0;
+  border: 0;
+}
+
+#footer .flex-container .flex-item .flex-container .flex-item #links a i {
+  font-size: 2.5rem;
+  padding: 0.5rem;
+}
+
+#footer .flex-container .flex-item .flex-container .flex-item #links a i:hover {
+  color: var(--dark-blue-color) !important;
+}
+
+#footer .flex-container .flex-item .flex-container .flex-item #email {
+  margin: auto;
+  font-size: 1.8rem;
+}
+
+#footer .flex-container i {
+  color: var(--darkish-white-color) !important;
+}
+
+#footer .flex-container p {
+  color: var(--darkish-white-color);
+  text-align: center;
+  font-size: 1.5rem;
+}
+
 .section-heading {
   margin: 0 0;
   font-weight: none;
   font-family: 'Dancing Script', cursive;
   text-shadow: 2px 2px 3px var(--dark-gray-color);
   color: var(--dark-blue-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--darkish-white-color);
 }
 
 .section-heading::after {
