@@ -1,5 +1,4 @@
-
-var isScrollOn = true;
+const isScrollOn = true;
 
 function toggleScroll(){
     isScrollOn == false ? isScrollOn = true : isScrollOn = false;    
@@ -7,6 +6,12 @@ function toggleScroll(){
     console.log("scroll:"+isScrollOn)
 }
 
+const navbarToggleButton = document.getElementsByClassName('toggle-button')[0];
+const navbarLinks = document.getElementsByClassName('navbar-links')[0];
+
+navbarToggleButton.addEventListener('click',()=>{
+    navbarLinks.classList.toggle('active');
+});
 //toggleScroll();
 //window.setTimeout(toggleScroll,7000);
 
