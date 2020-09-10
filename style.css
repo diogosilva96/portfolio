@@ -31,6 +31,16 @@ body {
   margin: 0 auto;
 }
 
+.navbar {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#navbar {
+  width: 100%;
+  display: block;
+}
+
 #navbar .navbar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -52,12 +62,7 @@ body {
   font-size: 2.5rem;
   text-transform: uppercase;
   font-weight: bold;
-  padding: 2rem;
-}
-
-#navbar .navbar .navbar-links {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  padding: 1.5rem;
 }
 
 #navbar .navbar .navbar-links ul {
@@ -75,6 +80,7 @@ body {
 #navbar .navbar .navbar-links li a {
   display: block;
   text-decoration: none;
+  font-size: 1.8rem;
   padding: 2rem;
 }
 
@@ -164,41 +170,16 @@ body {
 #front-page .flex-container .flex-item {
   padding: 5%;
   text-align: center;
-}
-
-#front-page .flex-container .flex-item#welcome-msg {
   width: 100%;
-}
-
-#front-page .flex-container .flex-item#welcome-msg #slide-left-1 {
-  -webkit-animation: 2s slide-horizontal-center 1.75s forwards;
-          animation: 2s slide-horizontal-center 1.75s forwards;
-  -webkit-transform: translateX(150%);
-          transform: translateX(150%);
-}
-
-#front-page .flex-container .flex-item#welcome-msg #slide-right-1 {
-  -webkit-animation: 2s slide-horizontal-center 0s forwards;
-          animation: 2s slide-horizontal-center 0s forwards;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-}
-
-#front-page .flex-container .flex-item#welcome-msg #slide-up-1 {
-  -webkit-animation: 2s slide-vertical-center 3.5s forwards;
-          animation: 2s slide-vertical-center 3.5s forwards;
-  -webkit-transform: translateY(100vh);
-          transform: translateY(100vh);
 }
 
 #front-page .flex-container .flex-item#personal-info {
   visibility: hidden;
-  -webkit-animation: 2s fade-in 5s forwards;
-          animation: 2s fade-in 5s forwards;
-  width: 17%;
+  -webkit-animation: 1s fade-in 0s forwards;
+          animation: 1s fade-in 0s forwards;
+  width: 15%;
   background-color: rgba(224, 224, 224, 0.7);
   border-radius: 10px;
-  margin-right: 8%;
 }
 
 #front-page .flex-container .flex-item#personal-info p {
@@ -214,8 +195,10 @@ body {
 }
 
 #front-page .flex-container .flex-item#personal-info img:first-child {
-  width: 200px;
-  border-radius: 250px;
+  max-width: 100%;
+  min-width: 100px;
+  height: auto;
+  border-radius: 100%;
 }
 
 #front-page .flex-container .flex-item#personal-info img:last-child {
@@ -232,18 +215,6 @@ body {
 
 #front-page .flex-container .flex-item#personal-info h2 {
   color: var(--dark-blue-color);
-}
-
-#front-page .flex-container .flex-item h1 {
-  font-size: 5rem;
-  text-shadow: 2px 2px 3px black;
-}
-
-@media only screen and (max-width: 700px) {
-  #front-page .flex-container .flex-item:first-child {
-    width: 0;
-    display: none;
-  }
 }
 
 a i {

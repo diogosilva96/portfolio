@@ -22,7 +22,12 @@ body {
     }
 }
 
+.navbar{
+    transition: all 0.5s ease;
+}
 #navbar{
+    width:100%;
+    display:block;
     .navbar{
         display:flex;
         justify-content: space-between;
@@ -36,10 +41,9 @@ body {
             font-size:2.5rem;
             text-transform: uppercase;
             font-weight:bold;
-            padding:2rem;
+            padding:1.5rem;
         }
         .navbar-links{
-            transition:0.5s;
             ul{
                 margin:0;
                 padding:0;
@@ -50,6 +54,7 @@ body {
                 a{
                     display:block;
                     text-decoration:none;
+                    font-size:1.8rem;
                     padding:2rem;
                     &:hover{
                         background-color:var(--dark-gray-color)
@@ -119,30 +124,13 @@ body {
         .flex-item{
             padding:5%;
             text-align:center;
-            
-            &#welcome-msg{
-                width:100%;
-                
-                #slide-left-1 {
-                    animation: 2s slide-horizontal-center 1.75s forwards;
-                    transform: translateX(150%);
-                }
-                #slide-right-1 { 
-                    animation: 2s slide-horizontal-center 0s forwards;
-                    transform:translateX(-100%);
-                }   
-                #slide-up-1{
-                    animation:2s slide-vertical-center 3.5s forwards;
-                    transform:translateY(100vh);
-                }
-            }
+            width:100%;
             &#personal-info{
                 visibility: hidden;
-                animation: 2s fade-in 5s forwards;
-                width:17%;
+                animation:1s fade-in 0s forwards;
+                width:15%;
                 background-color:rgba(224, 224, 224, 0.7);
                 border-radius: 10px;
-                margin-right:8%;
                 p{
                     color:var(--darker-gray-color);
                 }
@@ -152,8 +140,10 @@ body {
                     margin:0 auto;
                     &:first-child{
                         
-                        width:200px;
-                        border-radius: 250px;
+                        max-width:100%;
+                        min-width:100px;
+                        height:auto;
+                        border-radius: 100%;
                     }
 
                     &:last-child{
@@ -172,18 +162,6 @@ body {
                 
             }
 
-            h1 {
-                font-size:5rem;
-                text-shadow: 2px 2px 3px black;
-            }
-        }
-        @media only screen and (max-width: 700px) {
-            .flex-item{
-                &:first-child{
-                    width:0;
-                    display:none;
-                }
-            }       
         }
     }
 }
