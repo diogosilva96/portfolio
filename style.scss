@@ -39,8 +39,8 @@ nav {
     display:flex;
     flex-direction: row;
     align-items: center;
-    height:10vh;
     z-index:1;
+    height:10vh;
     .nav-title{
         color:var(--darkish-white-color);
         width:50%;
@@ -58,7 +58,6 @@ nav {
         align-items:center;
         padding:0;
         margin: 0;
-
         li {
             padding:0;
             margin:0;
@@ -86,6 +85,14 @@ nav {
             top:50%;
             transform:translate(-5%,-50%);
             z-index:2;
+            
+            .line{
+                transition: 0.5s all;
+                width:30px;
+                height:3px;
+                background:var(--darkish-white-color);
+                margin:5px;
+            }
         }
         .nav-title{
             z-index:2;
@@ -95,12 +102,7 @@ nav {
             transform:translate(2%,25%);
             width:100%;
         }
-        .line{
-            width:30px;
-            height:3px;
-            background:var(--darkish-white-color);
-            margin:5px;
-        }
+
         
         .nav-links{
             position:fixed;
@@ -112,10 +114,10 @@ nav {
             clip-path:circle(100px at 90% -10%);
             transition: all 1s ease;
             pointer-events:none;
-
             li{
                 opacity: 0;
                 a{
+                    
                     font-size:2.5rem;
                 }
 
@@ -142,6 +144,33 @@ nav {
                 pointer-events:all;
                 clip-path:circle(1400px at 90% -10%);
             }
+        
+        }
+        .hamburger{
+            position:absolute;
+            cursor:pointer;
+           
+            &.open{
+
+                background-color:blue;
+                .line{
+                    right:5%;
+                    top:50%;
+                    transform:translate(-5%,-50%);
+                    z-index:2;
+                    position:absolute;
+                        &:nth-child(1){
+                            transform:rotate(45deg);
+                        }
+                        &:nth-child(2){
+                            transform:translateX(200px);
+                        }
+                        &:nth-child(3){
+                            transform:rotate(135deg);
+                            
+                        }
+                }
+            }
         }
     }
 }
@@ -166,7 +195,7 @@ nav {
             padding:5%;
             text-align:center;
             width:100%;
-            &#personal-info{
+            &#personal-info-card{
                 visibility: hidden;
                 animation:1s fade-in 0s forwards;
                 width:100%;
@@ -367,7 +396,6 @@ a i{
 .section-heading {
     margin:0 0;
     font-weight: none;
-    font-family: 'Dancing Script', cursive;
     text-shadow: 2px 2px 3px var(--dark-gray-color);
     color:var(--dark-blue-color);
 }
@@ -391,20 +419,15 @@ a{
 }
 
 h1 {
-    font-size:5rem;
+    font-size:4rem;
 }
 
 @keyframes slide-horizontal-center {
     to {
-    transform:translateX(0);
+    transform:translateX(3000px);
     }
 }  
 
-@keyframes slide-vertical-center {
-    to {
-    transform:translateY(0);
-    }
-}  
 
 @keyframes fade-in {
     0% {

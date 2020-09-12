@@ -52,8 +52,8 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 10vh;
   z-index: 1;
+  height: 10vh;
 }
 
 nav .nav-title {
@@ -112,6 +112,14 @@ nav .nav-links li a:hover {
             transform: translate(-5%, -50%);
     z-index: 2;
   }
+  nav .hamburger .line {
+    -webkit-transition: 0.5s all;
+    transition: 0.5s all;
+    width: 30px;
+    height: 3px;
+    background: var(--darkish-white-color);
+    margin: 5px;
+  }
   nav .nav-title {
     z-index: 2;
     position: absolute;
@@ -120,12 +128,6 @@ nav .nav-links li a:hover {
     -webkit-transform: translate(2%, 25%);
             transform: translate(2%, 25%);
     width: 100%;
-  }
-  nav .line {
-    width: 30px;
-    height: 3px;
-    background: var(--darkish-white-color);
-    margin: 5px;
   }
   nav .nav-links {
     position: fixed;
@@ -175,6 +177,33 @@ nav .nav-links li a:hover {
     -webkit-clip-path: circle(1400px at 90% -10%);
             clip-path: circle(1400px at 90% -10%);
   }
+  nav .hamburger {
+    position: absolute;
+    cursor: pointer;
+  }
+  nav .hamburger.open {
+    background-color: blue;
+  }
+  nav .hamburger.open .line {
+    right: 5%;
+    top: 50%;
+    -webkit-transform: translate(-5%, -50%);
+            transform: translate(-5%, -50%);
+    z-index: 2;
+    position: absolute;
+  }
+  nav .hamburger.open .line:nth-child(1) {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  nav .hamburger.open .line:nth-child(2) {
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
+  }
+  nav .hamburger.open .line:nth-child(3) {
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
 }
 
 #front-page {
@@ -201,7 +230,7 @@ nav .nav-links li a:hover {
   width: 100%;
 }
 
-#front-page .flex-container .flex-item#personal-info {
+#front-page .flex-container .flex-item#personal-info-card {
   visibility: hidden;
   -webkit-animation: 1s fade-in 0s forwards;
           animation: 1s fade-in 0s forwards;
@@ -210,11 +239,11 @@ nav .nav-links li a:hover {
   border-radius: 10px;
 }
 
-#front-page .flex-container .flex-item#personal-info p {
+#front-page .flex-container .flex-item#personal-info-card p {
   color: var(--darker-gray-color);
 }
 
-#front-page .flex-container .flex-item#personal-info img {
+#front-page .flex-container .flex-item#personal-info-card img {
   vertical-align: middle;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -222,7 +251,7 @@ nav .nav-links li a:hover {
   margin: 0 auto;
 }
 
-#front-page .flex-container .flex-item#personal-info img:first-child {
+#front-page .flex-container .flex-item#personal-info-card img:first-child {
   max-width: 100%;
   min-width: 100px;
   height: auto;
@@ -230,19 +259,19 @@ nav .nav-links li a:hover {
   border-radius: 100%;
 }
 
-#front-page .flex-container .flex-item#personal-info img:last-child {
+#front-page .flex-container .flex-item#personal-info-card img:last-child {
   width: 3rem;
   margin: auto;
 }
 
-#front-page .flex-container .flex-item#personal-info .flex-container {
+#front-page .flex-container .flex-item#personal-info-card .flex-container {
   padding-top: 5%;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
 
-#front-page .flex-container .flex-item#personal-info h2 {
+#front-page .flex-container .flex-item#personal-info-card h2 {
   color: var(--dark-blue-color);
 }
 
@@ -446,7 +475,6 @@ a i:hover {
 .section-heading {
   margin: 0 0;
   font-weight: none;
-  font-family: 'Dancing Script', cursive;
   text-shadow: 2px 2px 3px var(--dark-gray-color);
   color: var(--dark-blue-color);
 }
@@ -472,34 +500,20 @@ a {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
 @-webkit-keyframes slide-horizontal-center {
   to {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    -webkit-transform: translateX(3000px);
+            transform: translateX(3000px);
   }
 }
 
 @keyframes slide-horizontal-center {
   to {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
-
-@-webkit-keyframes slide-vertical-center {
-  to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-@keyframes slide-vertical-center {
-  to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateX(3000px);
+            transform: translateX(3000px);
   }
 }
 

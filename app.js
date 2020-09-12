@@ -1,35 +1,11 @@
-const isScrollOn = true;
-
-function toggleScroll(){
-    isScrollOn == false ? isScrollOn = true : isScrollOn = false;    
-    isScrollOn == false ? window.onscroll = ()=>window.scrollTo(0,0) :window.onscroll = ()=>"";
-    console.log("scroll:"+isScrollOn)
-}
-
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 const navlinksListItem = document.querySelectorAll('.nav-links li');
 const navlinksListItemLink = document.querySelectorAll('.nav-links li a');
 
-
-hamburger.addEventListener('click',()=>{
-    toggleNavOpen();
-    toggleNavLinksFade();
-});
-
-navlinksListItemLink.forEach(link=>{
-    link.addEventListener('click',()=>{
-        var fadeLinks = document.querySelectorAll('.fade');
-        if (fadeLinks.length>0){
-            toggleNavOpen();
-            toggleNavLinksFade();
-        }
-    });
-});
-
-
-function toggleNavOpen(){
+function toggleOpen(){
     navLinks.classList.toggle('open');
+    hamburger.classList.toggle('open');
 }
 
 function toggleNavLinksFade(){
@@ -38,6 +14,20 @@ function toggleNavLinksFade(){
     });
 }
 
+hamburger.addEventListener('click',()=>{
+    toggleOpen();
+    toggleNavLinksFade();
+});
+
+navlinksListItemLink.forEach(link=>{
+    link.addEventListener('click',()=>{
+        var fadeLinks = document.querySelectorAll('.fade');
+        if (fadeLinks.length>0){
+            toggleOpen();
+            toggleNavLinksFade();
+        }
+    });
+});
 
 //toggleScroll();
 //window.setTimeout(toggleScroll,7000);
