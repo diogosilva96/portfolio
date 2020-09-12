@@ -6,12 +6,39 @@ function toggleScroll(){
     console.log("scroll:"+isScrollOn)
 }
 
-const navbarToggleButton = document.getElementsByClassName('toggle-button')[0];
-const navbarLinks = document.getElementsByClassName('navbar-links')[0];
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+const navlinksListItem = document.querySelectorAll('.nav-links li');
+const navlinksListItemLink = document.querySelectorAll('.nav-links li a');
 
-navbarToggleButton.addEventListener('click',()=>{
-    navbarLinks.classList.toggle('active');
+
+hamburger.addEventListener('click',()=>{
+    toggleNavOpen();
+    toggleNavLinksFade();
 });
+
+navlinksListItemLink.forEach(link=>{
+    link.addEventListener('click',()=>{
+        var fadeLinks = document.querySelectorAll('.fade');
+        if (fadeLinks.length>0){
+            toggleNavOpen();
+            toggleNavLinksFade();
+        }
+    });
+});
+
+
+function toggleNavOpen(){
+    navLinks.classList.toggle('open');
+}
+
+function toggleNavLinksFade(){
+    navlinksListItem.forEach(link=>{
+        link.classList.toggle('fade');
+    });
+}
+
+
 //toggleScroll();
 //window.setTimeout(toggleScroll,7000);
 
