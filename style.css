@@ -52,8 +52,11 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 10vh;
+  z-index: 1;
 }
 
 nav .nav-title {
@@ -85,12 +88,23 @@ nav .nav-links {
 nav .nav-links li {
   padding: 0;
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 nav .nav-links li a {
+  margin: 0 auto;
   color: var(--gray-color);
   text-decoration: none;
   font-size: 1.8rem;
+  border: 2px;
 }
 
 nav .nav-links li a:hover {
@@ -98,7 +112,11 @@ nav .nav-links li a:hover {
 }
 
 @media only screen and (max-width: 768px) {
+  section {
+    padding-top: 13vh;
+  }
   nav {
+    margin-bottom: 15vh;
     position: fixed;
     display: block;
     width: 100%;
@@ -302,11 +320,10 @@ a i:hover {
   padding: 2% 3%;
 }
 
-#education-work {
+#education {
   background-color: var(--normal-white-color);
   border-radius: 0.4rem;
   width: 100%;
-  padding: 5% 0;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -316,18 +333,18 @@ a i:hover {
   text-align: center;
 }
 
-#education-work .flex-item {
+#education .flex-item {
   width: 100%;
 }
 
-#education-work .flex-item:first-child .flex-container {
+#education .flex-item:first-child .flex-container {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
 
-#education-work .flex-item:first-child .flex-container .flex-item p:first-child {
+#education .flex-item:first-child .flex-container .flex-item p:first-child {
   font-weight: bold;
 }
 

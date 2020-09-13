@@ -39,8 +39,9 @@ nav {
     display:flex;
     flex-direction: row;
     align-items: center;
-    z-index:1;
+    justify-content: center;
     height:10vh;
+    z-index:1;
     .nav-title{
         color:var(--darkish-white-color);
         width:50%;
@@ -61,10 +62,15 @@ nav {
         li {
             padding:0;
             margin:0;
+            display:flex;
+            justify-content: center;
+            align-items:center;
             a{
+                margin: 0 auto;
                 color:var(--gray-color);
                 text-decoration: none;
                 font-size:1.8rem;
+                border:2px;
                 &:hover{
                     color:var(--normal-white-color);
                 }
@@ -74,7 +80,12 @@ nav {
 }
 
 @media only screen and (max-width: 768px) {
+    section {
+        padding-top:13vh;
+    }
+
     nav {
+        margin-bottom: 15vh;
         position:fixed;
         display:block;
         width:100%;
@@ -254,11 +265,10 @@ a i{
         }
 }
 
-#education-work { 
+#education { 
     background-color:var(--normal-white-color);
     border-radius:0.4rem;
     width:100%;
-    padding:5% 0;
     justify-content: flex-start;
     align-items: flex-start;
     text-align:center;
