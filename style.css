@@ -208,29 +208,21 @@ nav .nav-links li a:hover {
 
 #front-page {
   height: 100vh;
-  background: url(images/home-bg-img.jpg);
   background-size: 100%;
   color: var(--normal-white-color);
   height: 100vh;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#front-page .flex-container {
   height: 100%;
   overflow: hidden;
   width: 50%;
 }
 
-#front-page .flex-container .flex-item {
+#front-page .flex-item {
   padding: 5%;
   text-align: center;
   width: 100%;
 }
 
-#front-page .flex-container .flex-item#personal-info-card {
+#front-page .flex-item#personal-info-card {
   visibility: hidden;
   -webkit-animation: 1s fade-in 0s forwards;
           animation: 1s fade-in 0s forwards;
@@ -239,11 +231,11 @@ nav .nav-links li a:hover {
   border-radius: 10px;
 }
 
-#front-page .flex-container .flex-item#personal-info-card p {
+#front-page .flex-item#personal-info-card p {
   color: var(--darker-gray-color);
 }
 
-#front-page .flex-container .flex-item#personal-info-card img {
+#front-page .flex-item#personal-info-card img {
   vertical-align: middle;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -251,7 +243,7 @@ nav .nav-links li a:hover {
   margin: 0 auto;
 }
 
-#front-page .flex-container .flex-item#personal-info-card img:first-child {
+#front-page .flex-item#personal-info-card img:first-child {
   max-width: 100%;
   min-width: 100px;
   height: auto;
@@ -259,19 +251,19 @@ nav .nav-links li a:hover {
   border-radius: 100%;
 }
 
-#front-page .flex-container .flex-item#personal-info-card img:last-child {
+#front-page .flex-item#personal-info-card img:last-child {
   width: 3rem;
   margin: auto;
 }
 
-#front-page .flex-container .flex-item#personal-info-card .flex-container {
+#front-page .flex-item#personal-info-card .flex-container {
   padding-top: 5%;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
 
-#front-page .flex-container .flex-item#personal-info-card h2 {
+#front-page .flex-item#personal-info-card h2 {
   color: var(--dark-blue-color);
 }
 
@@ -312,9 +304,6 @@ a i:hover {
 
 #education-work {
   background-color: var(--normal-white-color);
-}
-
-#education-work .flex-container {
   border-radius: 0.4rem;
   width: 100%;
   padding: 5% 0;
@@ -327,18 +316,18 @@ a i:hover {
   text-align: center;
 }
 
-#education-work .flex-container .flex-item {
+#education-work .flex-item {
   width: 100%;
 }
 
-#education-work .flex-container .flex-item:first-child .flex-container {
+#education-work .flex-item:first-child .flex-container {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
 
-#education-work .flex-container .flex-item:first-child .flex-container .flex-item p:first-child {
+#education-work .flex-item:first-child .flex-container .flex-item p:first-child {
   font-weight: bold;
 }
 
@@ -394,12 +383,9 @@ a i:hover {
   height: 200px;
 }
 
-#footer {
+footer {
   margin: 0;
   padding: 0;
-}
-
-#footer .flex-container {
   background-color: var(--darker-gray-color);
   padding: 2% 0;
   -webkit-box-orient: vertical;
@@ -414,13 +400,13 @@ a i:hover {
           align-items: flex-start;
 }
 
-#footer .flex-container .flex-item {
+footer .flex-item {
   width: 100%;
   margin: 0;
   height: 100%;
 }
 
-#footer .flex-container .flex-item .flex-container {
+footer .flex-item .flex-container {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -428,13 +414,13 @@ a i:hover {
   padding: 0;
 }
 
-#footer .flex-container .flex-item .flex-container .flex-item {
+footer .flex-item .flex-container .flex-item {
   margin: 0 auto;
   height: 100%;
   width: 100%;
 }
 
-#footer .flex-container .flex-item .flex-container .flex-item #links {
+footer .flex-item .flex-container .flex-item #links {
   margin: 0 auto;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -448,25 +434,25 @@ a i:hover {
           align-items: center;
 }
 
-#footer .flex-container .flex-item .flex-container .flex-item #links a {
+footer .flex-item .flex-container .flex-item #links a {
   padding: 0;
   border: 0;
 }
 
-#footer .flex-container .flex-item .flex-container .flex-item #links a i {
+footer .flex-item .flex-container .flex-item #links a i {
   font-size: 2.5rem;
   padding: 0.5rem;
 }
 
-#footer .flex-container .flex-item .flex-container .flex-item #links a i:hover {
+footer .flex-item .flex-container .flex-item #links a i:hover {
   color: var(--dark-blue-color) !important;
 }
 
-#footer .flex-container i {
+footer i {
   color: var(--darkish-white-color) !important;
 }
 
-#footer .flex-container p {
+footer p {
   color: var(--darkish-white-color);
   text-align: center;
   font-size: 1.5rem;

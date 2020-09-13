@@ -149,7 +149,6 @@ nav {
         .hamburger{
             position:absolute;
             cursor:pointer;
-           
             &.open{
 
                 background-color:blue;
@@ -178,61 +177,51 @@ nav {
 
 #front-page {
     height: 100vh;
-    background:  url(images/home-bg-img.jpg);
     background-size: 100%;
     color:var(--normal-white-color);
     height: 100vh; 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-    .flex-container {
-        height:100%;
-        overflow:hidden;
-        width:50%;
-        .flex-item{
-            padding:5%;
-            text-align:center;
+    height:100%;
+    overflow:hidden;
+    width:50%;
+    .flex-item{
+        padding:5%;
+        text-align:center;
+        width:100%;
+        &#personal-info-card{
+            visibility: hidden;
+            animation:1s fade-in 0s forwards;
             width:100%;
-            &#personal-info-card{
-                visibility: hidden;
-                animation:1s fade-in 0s forwards;
-                width:100%;
-                background-color:rgba(224, 224, 224, 0.7);
-                border-radius: 10px;
-                p{
-                    color:var(--darker-gray-color);
-                }
-                img{
-                    vertical-align: middle;
-                    align-self: center;
-                    margin:0 auto;
-                    &:first-child{
-                        
-                        max-width:100%;
-                        min-width:100px;
-                        height:auto;
-                        max-height:400px;
-                        border-radius: 100%;
-                    }
-
-                    &:last-child{
-                        width:3rem;
-                        margin:auto;
-                    }
+            background-color:rgba(224, 224, 224, 0.7);
+            border-radius: 10px;
+            p{
+                color:var(--darker-gray-color);
+            }
+            img{
+                vertical-align: middle;
+                align-self: center;
+                margin:0 auto;
+                &:first-child{
                     
+                    max-width:100%;
+                    min-width:100px;
+                    height:auto;
+                    max-height:400px;
+                    border-radius: 100%;
                 }
-                .flex-container{
-                    padding-top:5%;
-                    justify-content: space-evenly;
-                }
-                h2{
-                    color:var(--dark-blue-color);
+
+                &:last-child{
+                    width:3rem;
+                    margin:auto;
                 }
                 
             }
-
+            .flex-container{
+                padding-top:5%;
+                justify-content: space-evenly;
+            }
+            h2{
+                color:var(--dark-blue-color);
+            }
         }
     }
 }
@@ -267,35 +256,30 @@ a i{
 
 #education-work { 
     background-color:var(--normal-white-color);
-    .flex-container{
-        border-radius:0.4rem;
+    border-radius:0.4rem;
+    width:100%;
+    padding:5% 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align:center;
+    .flex-item{
         width:100%;
-        padding:5% 0;
-        justify-content: flex-start;
-        align-items: flex-start;
-        text-align:center;
-
-        .flex-item{
-            width:100%;
-            &:first-child{
-                .flex-container{
-                    flex-direction: column;
-                    .flex-item{
-                        p{
-                            &:first-child{
-                                font-weight:bold;
-                            }
+        &:first-child{
+            .flex-container{
+                flex-direction: column;
+                .flex-item{
+                    p{
+                        &:first-child{
+                            font-weight:bold;
                         }
                     }
                 }
             }
         }
-    }
+    } 
 }
 
 #contact {
-
-
     background-color:var(--darkish-white-color);
     form {
         width:100%;
@@ -338,61 +322,57 @@ a i{
     }
     
 }
-#footer {
+footer {
     margin:0;
     padding:0;
-    .flex-container{
-        background-color:var(--darker-gray-color);
-        padding:2% 0;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items:flex-start;
-        .flex-item{
-            width:100%;
-            margin:0;
-            height:100%;
-            .flex-container{
-                flex-direction: row;
-                padding:0;
-                .flex-item {
+    background-color:var(--darker-gray-color);
+    padding:2% 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:flex-start;
+
+    .flex-item{
+        width:100%;
+        margin:0;
+        height:100%;
+        .flex-container{
+            flex-direction: row;
+            padding:0;
+            .flex-item {
+                margin: 0 auto;
+                height:100%;
+                width:100%;
+                #links{
                     margin: 0 auto;
-                    height:100%;
-                    width:100%;
-                    #links{
-                        margin: 0 auto;
-                        flex-direction: row;
-                        justify-content:center;
-                        align-items:center;
-                        a{
-                            padding:0;
-                            border:0;
-                            i{
-                                font-size:2.5rem;
-                                &:hover{
-                                    color:var(--dark-blue-color) !important;
-                                }
-                                padding:0.5rem;
+                    flex-direction: row;
+                    justify-content:center;
+                    align-items:center;
+                    a{
+                        padding:0;
+                        border:0;
+                        i{
+                            font-size:2.5rem;
+                            &:hover{
+                                color:var(--dark-blue-color) !important;
                             }
+                            padding:0.5rem;
                         }
                     }
-
-
-
                 }
             }
         }
-        i{
-            color:var(--darkish-white-color) !important;
-
-        }
-        p{
-            color:var(--darkish-white-color);
-            text-align:center;
-            font-size: 1.5rem;
-        }    
     }
+    i{
+        color:var(--darkish-white-color) !important;
 
+    }
+    p{
+        color:var(--darkish-white-color);
+        text-align:center;
+        font-size: 1.5rem;
+    }    
 }
+
 .section-heading {
     margin:0 0;
     font-weight: none;
