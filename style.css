@@ -350,42 +350,35 @@ a i:hover {
 
 #contact {
   background-color: var(--darkish-white-color);
-}
-
-#contact form {
-  width: 100%;
-  margin: auto;
-  padding: 5% 0;
-  border-radius: 0.4rem;
-  -webkit-animation: 0.5s;
-          animation: 0.5s;
-}
-
-#contact form h1 {
+  display: block;
   text-align: center;
+}
+
+#contact h1 {
   padding-bottom: 2%;
 }
 
-#contact form input, #contact form textarea {
-  display: block;
-  text-align: left;
+#contact form {
+  display: inline-block;
   margin: 0 auto;
-  border: solid 0.2rem var(--gray-color);
+  text-align: left;
+  border-radius: 0.4rem;
 }
 
-#contact form input:hover, #contact form textarea:hover {
-  border: solid 0.2rem var(--darker-gray-color);
+#contact form label {
+  display: block;
+  padding: 2% 0;
 }
 
 #contact form input[type="text"], #contact form input[type="email"], #contact form textarea {
-  width: 250px;
-  height: 2rem;
+  display: block;
+  width: 350px;
+  height: 3rem;
   outline: none;
+  border: none;
   background-color: var(--normal-white-color);
   color: var(--dark-blue-color);
   border-radius: 0.5rem;
-  -webkit-animation: all 0.5s;
-          animation: all 0.5s;
 }
 
 #contact form input[type="text"]:focus, #contact form input[type="email"]:focus, #contact form textarea:focus {
@@ -398,6 +391,26 @@ a i:hover {
 
 #contact form input[type="text"]#f-content, #contact form input[type="email"]#f-content, #contact form textarea#f-content {
   height: 200px;
+}
+
+#contact form input[type="submit"] {
+  margin-top: 2rem;
+  width: 50%;
+  height: 4rem;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: var(--dark-blue-color);
+  color: var(--normal-white-color);
+  -webkit-transition: 0.6s all ease-in-out;
+  transition: 0.6s all ease-in-out;
+  border: 2px solid var(--dark-blue-color);
+}
+
+#contact form input[type="submit"]:hover {
+  color: var(--dark-blue-color);
+  background-color: var(--normal-white-color);
+  border: 2px solid var(--dark-blue-color);
 }
 
 footer {
@@ -478,24 +491,12 @@ footer p {
 .section-heading {
   margin: 0 0;
   font-weight: none;
-  text-shadow: 2px 2px 3px var(--dark-gray-color);
   color: var(--dark-blue-color);
 }
 
 a {
   text-decoration: none;
   color: var(--darkish-white-color);
-}
-
-.section-heading::after {
-  content: '';
-  display: block;
-  width: 5rem;
-  height: 0.5rem;
-  border-bottom: 0.3rem solid var(--dark-blue-color);
-  margin: auto;
-  -webkit-box-shadow: 0rem 0.2rem var(--dark-gray-color);
-          box-shadow: 0rem 0.2rem var(--dark-gray-color);
 }
 
 .special-font {
