@@ -39,15 +39,14 @@
         <h1 class="section-heading">About</h1>
             <div class="flex-container">
                 <div class="flex-item">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis adipisci nostrum totam eaque aut, delectus eius earum dolore pariatur voluptatum consequatur corrupti minima, maxime repellendus maiores rerum voluptates. Atque autem sed ad alias pariatur quod ipsam quaerat ducimus odio aspernatur repellat ipsum veniam, id obcaecati minima facere expedita libero dolores neque? Nisi, consequuntur. Est tenetur tempore eius nesciunt, doloribus laborum voluptatem laboriosam voluptatibus fugit. Voluptates, officiis rerum aspernatur ad earum nam? Obcaecati aliquid, animi voluptatum architecto dolor similique? Labore quidem ea maiores, mollitia exercitationem porro, magnam dolores ad incidunt debitis repellat nobis similique fugiat voluptatibus alias ab eum cumque aliquam!
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis adipisci nostrum totam eaque aut, delectus eius earum dolore pariatur voluptatum consequatur corrupti minima, maxime repellendus maiores rerum voluptates. Atque autem sed ad alias pariatur quod ipsam quaerat ducimus odio aspernatur repellat ipsum veniam, id obcaecati minima facere expedita libero dolores neque? Nisi, consequuntur. Est tenetur tempore eius nesciunt, doloribus laborum voluptatem laboriosam voluptatibus fugit. Voluptates, officiis rerum aspernatur ad earum nam? Obcaecati aliquid, animi voluptatum architecto dolor similique? Labore quidem ea maiores, mollitia exercitationem porro, magnam dolores ad incidunt debitis repellat nobis similique fugiat voluptatibus alias ab eum cumque aliquam!</p>
                 </div>
                 <div class="flex-item">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta dolore magni maiores officiis beatae amet cupiditate adipisci. Quaerat obcaecati nostrum laborum aut beatae est perferendis similique eum vitae ut sint accusantium neque doloremque quam incidunt aspernatur eligendi voluptate, repellat facilis? Alias suscipit molestiae deleniti nam rerum praesentium ipsam vitae error voluptates laborum nihil quae sequi, iste obcaecati vero a nemo voluptatum. Commodi quae id eius nihil iure veniam mollitia ut perspiciatis dolorum accusantium suscipit sunt minima deserunt labore quam amet, velit tempore porro excepturi voluptas ab! Corrupti libero, delectus sunt dolor reiciendis laboriosam nihil illo et, optio, quos ex placeat.
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quaerat accusantium distinctio numquam nisi quo nulla, dignissimos, nobis doloremque laboriosam animi voluptas assumenda atque ullam, eaque vitae autem. Eveniet velit eius quas id doloribus debitis ea mollitia doloremque nostrum quasi quae porro dolore totam voluptatem eaque illo tempora commodi animi accusamus nihil, cumque voluptatibus repellat. Nulla minus quod vero debitis obcaecati itaque laudantium quisquam modi nobis rerum, illum voluptatum accusamus!</p>
                 </div>
             </div>
     </section>
     <section class= "flex-container" id="education">
-        <div class="flex-item">
             <h1 class="section-heading">Education</h1>
             <div class="flex-container">
                 <div class="flex-item">
@@ -59,18 +58,26 @@
                     <p> University of Madeira. <br>Bachelor's Degree on Software Engineering. <br>Grade: 14</p>
                 </div>
             </div>
-        </div>
     </section>
     <section id="contact">
         <h1 class="section-heading">Contact me</h1>
         <form action="">
-            <label for="f-email">Email</label>
-            <input type="email" id="f-email" name="email" placeholder="Your email">
-            <label for="f-subject">Subject</label>
-            <input type="text" id="f-subject" name="subject" placeholder="Subject">
-            <label for="f-content">Content</label>
-            <textarea id="f-content" name="content" placeholder="Message"></textarea>
-            <input type="submit" value="Send" >
+            <div class="form-item-wrapper">
+                <input type="email" id="f-email" name="email" autocomplete="off" required>
+                <label for="f-email" class="label-name"><span class="content-name">Your Email</span></label>
+            </div>
+            <div class="form-item-wrapper">
+                <input type="text" id="f-subject" name="subject" autocomplete="off" required>
+                <label for="f-subject" class="label-name"><span class="content-name">Subject</span></label>
+            </div>
+            <div class="form-item-wrapper">
+                <div class="textarea-wrapper">
+                    <textarea id="f-message" autocomplete="off" required></textarea>
+                    <label for="f-message" class="label-name"><span class="content-name">Your Message</span></label>
+                </div>
+            </div>
+        
+            <!-- <input type="submit" value="Send" > -->
         </form>
     </section>
     <footer class="flex-container">
