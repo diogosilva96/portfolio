@@ -194,6 +194,9 @@ nav {
     height:100%;
     overflow:hidden;
     width:50%;
+    @media only screen and (max-width: 768px) {
+        width:90%;
+    }
     .flex-item{
         padding:5%;
         text-align:center;
@@ -251,9 +254,6 @@ a i{
 
 #about {
     background-color:var(--secondary-white-color);
-        h1 {
-            text-align:center;
-        }
         .flex-container{
             text-align:justify;
             justify-content: flex-start;
@@ -274,11 +274,6 @@ a i{
     align-items: center;
     text-align:left;
     flex-direction: column;
-    h1 {
-        display:block;
-        width: 100%;
-        text-align: center;
-    }
 
     .flex-container{
         .flex-item{
@@ -299,14 +294,42 @@ a i{
     
 }
 
+#projects{
+    .grid-container{
+        display:grid;
+        grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+        width:90%;
+        margin:0 auto;
+        gap:1%;
+        padding-bottom:50px;
+        .grid-item{
+            background-color:var(--secondary-white-color);
+            margin:3%;
+            text-align:center;
+            height:100%;
+            transition: all 0.5s ease;
+            width:90%;
+            height:90%;
+            padding-bottom:3%;
+            a{
+                width:100%;
+                padding:0;
+                margin:0;  
+                color:var(--darker-gray-color);
+                img{
+                    width:80%;  
+                }
+            }
+            &:hover{
+                transform:scale(1.05);
+            }
+        }
+    }
+}
 #contact {
     background-color:var(--secondary-white-color);
-
-    h1{ 
-        padding-bottom:2%;
-        text-align: center;
-    }
     form {
+        padding-top:2%;
         margin:0 auto;
         text-align: left;
         border-radius: 0.4rem;
@@ -442,7 +465,7 @@ a i{
             color:var(--primary-white-color);
             transition:0.6s all ease-in-out;
             text-transform: uppercase;
-            width:50%;
+            width:40%;
             &:hover{
                 background-color:var(--secondary-blue-color);
                 width:100%;
@@ -504,6 +527,7 @@ footer {
 }
 
 .section-heading {
+    text-align:center;
     margin:0 0;
     font-weight: none;
     color:var(--darker-gray-color);
@@ -513,16 +537,6 @@ a{
     text-decoration:none;
     color:var(--secondary-white-color);
 }
-
-// .section-heading::after {
-//     content:'';
-//     display:block;
-//     width:5rem;
-//     height:0.5rem;
-//     border-bottom:0.3rem solid var(--dark-blue-color);
-//     margin:auto;
-//     box-shadow: 0rem 0.2rem var(--dark-gray-color);
-// }
 
 .special-font {
     font-family:'Dancing Script', cursive;

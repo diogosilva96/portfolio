@@ -234,6 +234,12 @@ nav .nav-links li a:hover {
   width: 50%;
 }
 
+@media only screen and (max-width: 768px) {
+  #front-page {
+    width: 90%;
+  }
+}
+
 #front-page .flex-item {
   padding: 5%;
   text-align: center;
@@ -302,10 +308,6 @@ a i:hover {
   background-color: var(--secondary-white-color);
 }
 
-#about h1 {
-  text-align: center;
-}
-
 #about .flex-container {
   text-align: justify;
   -webkit-box-pack: start;
@@ -339,12 +341,6 @@ a i:hover {
           flex-direction: column;
 }
 
-#education h1 {
-  display: block;
-  width: 100%;
-  text-align: center;
-}
-
 #education .flex-container .flex-item {
   background-color: var(--secondary-white-color);
   margin: 2%;
@@ -362,16 +358,51 @@ a i:hover {
   font-weight: bold;
 }
 
+#projects .grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(450px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  width: 90%;
+  margin: 0 auto;
+  gap: 1%;
+  padding-bottom: 50px;
+}
+
+#projects .grid-container .grid-item {
+  background-color: var(--secondary-white-color);
+  margin: 3%;
+  text-align: center;
+  height: 100%;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  width: 90%;
+  height: 90%;
+  padding-bottom: 3%;
+}
+
+#projects .grid-container .grid-item a {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  color: var(--darker-gray-color);
+}
+
+#projects .grid-container .grid-item a img {
+  width: 80%;
+}
+
+#projects .grid-container .grid-item:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
 #contact {
   background-color: var(--secondary-white-color);
 }
 
-#contact h1 {
-  padding-bottom: 2%;
-  text-align: center;
-}
-
 #contact form {
+  padding-top: 2%;
   margin: 0 auto;
   text-align: left;
   border-radius: 0.4rem;
@@ -541,7 +572,7 @@ a i:hover {
   -webkit-transition: 0.6s all ease-in-out;
   transition: 0.6s all ease-in-out;
   text-transform: uppercase;
-  width: 50%;
+  width: 40%;
 }
 
 #contact form input[type="submit"]:hover {
@@ -625,6 +656,7 @@ footer p {
 }
 
 .section-heading {
+  text-align: center;
   margin: 0 0;
   font-weight: none;
   color: var(--darker-gray-color);
