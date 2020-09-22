@@ -13,7 +13,7 @@ body {
   margin: 0;
   padding: 0;
   color: var(--darker-gray-color);
-  font-size: 2.1rem;
+  font-size: 2rem;
 }
 
 .flex-container {
@@ -308,6 +308,10 @@ a i:hover {
   background-color: var(--secondary-white-color);
 }
 
+#about h1 {
+  padding-bottom: 2%;
+}
+
 #about .flex-container {
   text-align: justify;
   -webkit-box-pack: start;
@@ -316,12 +320,18 @@ a i:hover {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding: 2%;
+  width: 80%;
+}
+
+@media only screen and (max-width: 768px) {
+  #about .flex-container {
+    width: 95%;
+  }
 }
 
 #about .flex-container .flex-item {
   width: 100%;
-  padding: 2% 3%;
+  margin: 0 2%;
 }
 
 #education {
@@ -341,6 +351,10 @@ a i:hover {
           flex-direction: column;
 }
 
+#education h1 {
+  padding-bottom: 2%;
+}
+
 #education .flex-container .flex-item {
   background-color: var(--secondary-white-color);
   margin: 2%;
@@ -356,6 +370,10 @@ a i:hover {
 
 #education .flex-container .flex-item p:first-child {
   font-weight: bold;
+}
+
+#projects h1 {
+  padding-bottom: 2%;
 }
 
 #projects .grid-container {
@@ -440,8 +458,7 @@ a i:hover {
 #contact form .form-item-wrapper input[type="text"], #contact form .form-item-wrapper input[type="email"] {
   width: 100%;
   height: 100%;
-  padding-top: 4.5rem;
-  font-size: 2rem;
+  padding-top: 5rem;
   color: var(--darker-gray-color);
   border: none;
   outline: none;
@@ -452,7 +469,7 @@ a i:hover {
   -webkit-transform: translateY(-150%);
           transform: translateY(-150%);
   color: var(--primary-blue-color);
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 
 #contact form .form-item-wrapper input[type="text"]:focus + .label-name::after, #contact form .form-item-wrapper input[type="email"]:focus + .label-name::after {
@@ -464,7 +481,7 @@ a i:hover {
   -webkit-transform: translateY(-150%);
           transform: translateY(-150%);
   color: var(--primary-blue-color);
-  font-size: 2rem;
+  font-size: 2.1rem;
 }
 
 #contact form .form-item-wrapper input[type="text"]:valid + .label-name::after, #contact form .form-item-wrapper input[type="email"]:valid + .label-name::after {
@@ -572,6 +589,8 @@ a i:hover {
   -webkit-transition: 0.6s all ease-in-out;
   transition: 0.6s all ease-in-out;
   text-transform: uppercase;
+  font-size: clamp(1.5rem, 1.5vw, 2rem);
+  cursor: pointer;
   width: 40%;
 }
 
@@ -672,7 +691,15 @@ a {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: clamp(3rem, 3vw, 4.5rem);
+}
+
+h3 {
+  font-size: clamp(2.2rem, 2vw, 3rem);
+}
+
+p, input, label {
+  font-size: clamp(1.7rem, 1.5vw, 2rem);
 }
 
 @-webkit-keyframes slide-horizontal-center {
